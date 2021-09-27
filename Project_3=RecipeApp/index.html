@@ -10,17 +10,17 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
         />
     <link rel="stylesheet" href="style.css">
-    <script scr="script.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="mobile-container">
         <header>
             <input type="text">
-            <button id="search">Search</button>
+            <button id="search"><i class="fas fa-search"></i></button>
         </header>
         <div class="favorite-container">
             <h3>Favorite Meals</h3>
-            <ul>
+            <ul class="fav-meals">
                 <li><img src="https://www.themealdb.com/images/ingredients/Lime.png" alt="">
                     <span>Lime</span>
                 </li>
@@ -28,25 +28,14 @@
                     <span>Spaghetti</span>
                 </li>
                 <li><img src="https://www.themealdb.com/images/media/meals/xwutvy1511555540.jpg" alt="">
-                    <span>Meat pie</span>
+                    <span>Meat Pie</span>
+                </li>
+                <li><img src="https://www.themealdb.com/images/media/meals/usuqtp1511385394.jpg" alt="">
+                    <span>Sweet Pie</span>
                 </li>
             </ul>
         </div>
-        <div class="meals">
-            <span class="random">
-                Random Recipe
-            </span>
-            <div class="meal">
-                <div class="meal-header">
-                    <img src="https://www.themealdb.com/images/media/meals/usuqtp1511385394.jpg" alt="">
-                </div>
-                <div class="meal-body">
-                    <h4>Chicken</h4>
-                    <button>
-                        <i class="fa fa-heart"></i>
-                    </button>
-                </div>
-            </div>
+        <div class="meals" id="meals">
         </div>
     </div>
 </body>
