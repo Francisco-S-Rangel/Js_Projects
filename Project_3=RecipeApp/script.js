@@ -4,6 +4,7 @@ const searchTerm = document.getElementById('search-term');
 const searchBtn = document.getElementById('search');
 const mealPopup = document.getElementById('meal-popup');
 const popupBtn = document.getElementById("close-popup");
+const mealInfo = document.getElementById('meal-info');
 
 getRandomMeal();
 fetchFavMeals();
@@ -60,6 +61,9 @@ function addMeal(mealData,random = false){
     }
     fetchFavMeals();
     });
+    meal.addEventListener('click', () =>{
+        updateMealInfo(mealData);
+    });
 
     meals.appendChild(meal);
 }
@@ -101,6 +105,10 @@ function addMealtoFav(mealData){
 
           fetchFavMeals();
       });
+    
+      favMeal.addEventListener('click',()=>{
+          updateMealInfo(mealData);
+      });
 
     fav_meals.appendChild(favMeal);
 
@@ -114,4 +122,30 @@ searchBtn.addEventListener('click', async ()=>{
     aux_meals.forEach((meal) => {
         addMeal(meal);
     });}
+});
+function updateMealInfo(mealData){
+    mealInfo.innerHTML = "";
+    const info = document.createElement("div");
+    const ingredients = [];
+
+    for(let i=1; i<20; i++){
+        if(mealData["strIngredient"+i]){
+            ingredients.push(`${mealData["strIngredient"+i]} - ${mealData["strMeasure"+i]}`);
+        }else{
+            break;
+        }
+    }
+    info.innerHTML= `<div class="aux"><h1>${mealData.strMeal}</h1>
+    <img src="${mealData.strMealThumb}" alt="${mealData.strMeal}">
+        <p>${mealData.strInstructions}</p>
+        <h3>Ingredients:</h3>
+    <ul>
+    ${ingredients.map((ing) =>`<li>${ing}</li>`).join("")}
+    </ul></aux>`;
+    
+    mealInfo.appendChild(info);
+    mealPopup.classList.remove('hidden');
+}
+popupBtn.addEventListener("click",() =>{
+    mealPopup.classList.add("hidden");
 });
