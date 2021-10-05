@@ -1,0 +1,63 @@
+@import url("'https://fonts.googleapis.com/css2?family=Birthstone&display=swap'");
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: blanchedalmond;
+    font-family: 'Birthstone', cursive;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+h1 {
+    text-align: center;
+    color: brown;
+    font-size: 5rem;
+    opacity: 0.4;
+}
+form {
+    width: 400px;
+    max-width: 100%;
+    margin: auto;
+    box-shadow: 0 4px 10px brown;
+}
+.input {
+    border: none;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    width: 100%;
+    display: block;
+}
+.input::placeholder{
+    color: brown;
+    font-size: 1.5rem;
+}
+.assigments {
+    background-color: rgb(221, 221, 160);
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+.assigments li{
+    border-top:  2px solid white;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    cursor: pointer;
+}
+.assigments li.aux {
+    border-top:  2px solid brown;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    cursor: pointer;
+}
+.assigments li.completed {
+    text-decoration: line-through;
+    background-color: brown;
+    color: white;
+}
+.small {
+    color: brown;
+    font-size: 1.25rem;
+}
