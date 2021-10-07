@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+.main {
+    display: flex;
+    flex-wrap: wrap;
+}
+.movie {
+    background-color: blue;
+    box-shadow: 0px 5px 10px purple;
+    border-radius: 3px;
+    margin: 2rem;
+    width: 300px;
+}
+.movie img{
+    width: 100%;
+}
+.movie-info{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.rem 1rem 1rem;
+    color: whitesmoke;
+    letter-spacing: 0.5px;
+    align-items: center;
+}
+.movie-info h3{
+    margin: 0;
+}
+.movie-info span {
+    background-color: gray;
+    border-radius: 3px;
+    padding: 0.25rem 0.5rem;
+}
+.movie-info span.green{
+    color: rgb(21, 216, 21);
+}
+.movie-info span.yellow{
+    color: yellow;
+}
+.movie-info span.red{
+    color: red;
+}

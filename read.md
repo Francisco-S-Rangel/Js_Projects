@@ -3,3 +3,4 @@ Project 2: Quiz App.
 Project 3: Recibe App.
 Project 4: Notes App.
 Project 5: To do App.
+Project 6: Movie App.
