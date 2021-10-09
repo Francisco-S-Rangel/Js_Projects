@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    background-color: #12b3e4;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+input {
+    
+}
+.card {
+    background-image: url("https://singleboardbytes.com/wp-content/uploads/sites/7/2021/04/GitHub.jpg");
+    background-size: contain;
+    box-shadow: 0 5px 10px rgb(86, 68, 167), 0 15px 40px rgb(219, 72, 207);
+    display: flex;
+    padding: 3rem;
+    border-radius: 16px;
+}
+.avatar {
+    border-radius: 50%;
+    border: 5px solid whitesmoke;
+    height: 200px;
+    width: 200px;
+}
+.user-info {
+    background-color: transparent;
+    border-radius: 12px;
+    color: white;
+    margin-left: 2rem;
+}
