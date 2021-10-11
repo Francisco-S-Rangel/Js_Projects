@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: wheat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin:0;
+    min-height: 100vh;
+}
+canvas {
+    background-color: whitesmoke;
+    border: 5px solid brown;
+}
+a {
+    color: brown;
+    margin-left: 10px;
+}
+.toolbox {
+    background-color: gray;
+    padding: 0.20rem;
+    width: 810px;
+    border: 5px solid brown;
+}
+.toolbox button {
+    background-color: wheat;
+    color: brown;
+    font-weight: bolder;
+    border-radius: 3px;
+}
+.size {
+    color: whitesmoke;
+    font-weight: bolder;
+}
+.color {
+    height: 25px;
+    width: 75px;
+}
+.clear {
+    margin-left: 31rem;
+}

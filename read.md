@@ -5,3 +5,4 @@ Project 4: Notes App.
 Project 5: To do App.
 Project 6: Movie App.
 Project 7: GitHub Profiles.
+Project 8: Drawing App.
