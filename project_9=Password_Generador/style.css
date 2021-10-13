@@ -58,6 +58,7 @@ h1 {
     border-radius: 3px;
     color: red;
     font-weight: bold;
+    cursor: pointer;
 }
 .pw-header {
     padding: 1rem;
@@ -71,6 +72,7 @@ h1 {
     border-radius: 3px;
     color: red;
     font-weight: bold;
+    cursor: pointer;
 }
 .pw-body {
     color: rgb(255, 247, 0);
