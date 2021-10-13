@@ -9,36 +9,41 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="pw-container">
-        <div class="pw-header">
-            <div class="pw">
-                Time to question or lifestyle.
-                <button>Copy to Clipboard</button>
-            </div>
-        </div>
-        <div class="pw-body">
-            <div class="form-control">
-                <label for="lenght">Password Lenght</label>
-                <input  id="lenght" value="12" type="number" min="6" max="30"/>
-            </div>
-            <div class="form-control">
-                <label for="upper">Contain Uppercase Letters</label>
-                <input id="upper" type="checkbox">
-            </div>
-            <div class="form-control">
-                <label for="lower">Contain Lowercase Letters</label>
-                <input id="lower" type="checkbox">
-            </div>
-            <div class="form-control">
-                <label for="number">Contain Numbers</label>
-                <input id="number" type="checkbox">
-            </div>
-            <div class="form-control">
-                <label for="symbol">Contain Symbols</label>
-                <input id="symbols" type="checkbox">
-            </div>
-            <button class="generate">Generate Password</button>
-        </div>
+    <div class="aux">
+        <h1>Project 9: Password Generator</h1>
     </div>
+        <div class="aux2">
+            <div class="pw-container">
+                <div class="pw-header">
+                    <div class="pw">
+                        <span id='pw'></span>
+                        <button class="copy">Copy to Clipboard</button>
+                    </div>
+                </div>
+             <div class="pw-body">
+                <div class="form-control">
+                    <label for="lenght">Password Lenght</label>
+                    <input  id="lenght" value="10" type="number" min="5" max="22"/>
+                </div>
+                <div class="form-control">
+                    <label for="upper">Contain Uppercase Letters</label>
+                    <input id="upper" type="checkbox">
+                </div>
+                <div class="form-control">
+                    <label for="lower">Contain Lowercase Letters</label>
+                    <input id="lower" type="checkbox">
+                </div>
+                <div class="form-control">
+                    <label for="number">Contain Numbers</label>
+                    <input id="number" type="checkbox">
+                </div>
+                <div class="form-control">
+                    <label for="symbol">Contain Symbols</label>
+                    <input id="symbols" type="checkbox">
+                </div>
+                <button class="generate">Generate Password</button>
+                </div>
+            </div>
+        </div>
 </body>
 </html>

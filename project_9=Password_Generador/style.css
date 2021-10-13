@@ -3,12 +3,29 @@
 }
 body {
     background-color: green;
+    margin: 0;
+}
+.aux {
+    background-color: gray;
+    width: 680px;
+    border-radius: 5px;
+}
+h1 {
+    font-size: 2.75rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color:  rgb(255, 247, 0);
+    font-weight: bold;
+    margin-left: 1rem;
+}
+.aux2 {
+    background-color: green;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     margin:0;
     font-family: Arial, Helvetica, sans-serif;
+    max-width: 100%;
 }
 .pw-container {
     width: 400px;
@@ -16,6 +33,7 @@ body {
     height: 280px;
     border-radius: 8px;
     box-shadow: 10px 10px 5px 10px rgb(47, 255, 113);
+    margin-bottom: 5rem;
 }
 .pw {
     height: 100px;
