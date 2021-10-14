@@ -5,4 +5,46 @@
 }
 body {
     font-family: 'Bebas Neue', cursive;
+    background: linear-gradient(300deg,#B2FFFF,#29AB87);
+    margin:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+h2 {
+    font-size: 3rem;
+    margin-bottom: 10rem;
+}
+input {
+    padding: 1rem;
+    background-color: ivory;
+    border-radius: 25px;
+    box-shadow: 1.5px 3px gray;
+    border: none;
+    font-family: inherit;
+    min-width: 300px;
+}
+input::placeholder {
+    font-size: 1rem;
+    font-weight: bolder;
+}
+input:focus {
+    outline: none;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+.weather {
+    text-align: center;
+    font-size: 2rem;
+}
+.weather h2 {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+.nameCity {
+   font-size: 1.25rem;
+   margin-bottom: 3rem;
 }
