@@ -8,4 +8,4 @@ Project 7: GitHub Profiles.
 Project 8: Drawing App.
 Project 9: Password Generator.
 Project 10: Weather App.
-project 11: BMI Calculator.
+Project 11: BMI Calculator.
