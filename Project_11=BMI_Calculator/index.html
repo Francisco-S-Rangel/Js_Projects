@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="main-container">
+        <h1>Body Mass Index</h1>
+        <p class='aux'>Calculate your BMI.</p>
+        <div class="content-container">
+            <p for="height">HEIGHT: </p>
+            <p><input type="text" id="height"
+                autocomplete="off"/> CM</p>
+            <p for="weight">WEIGHT: </p>
+            <p><input type="text" id="weight"
+                autocomplete="off"/> KG</p>
+            <button class="calculate">Calculate</button>
+        </div>
+        <p class="aux2">Your IBM:  <span id="ibm"></span></p>
+        <p class="aux3">Your weight classification:  <span id="classification"></span></p>
+    </div>
+</body>
+</html>
