@@ -36,11 +36,15 @@ input:focus{
     outline: none;
     font-weight: bolder;
 }
+small {
+    font-weight: bolder;
+    margin-left: 2rem;
+}
 .country {
     background-color: rgb(174, 226, 238);
     border-radius: 10px;
     width: 400px;
-    height: 460px;
+    height: 480px;
     margin-top: 2rem;
 }
 .country h2.title {

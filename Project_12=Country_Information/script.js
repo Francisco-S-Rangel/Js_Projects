@@ -1,4 +1,5 @@
 const ContriesAPI = 'https://restcountries.com/v3.1/name/';
+const wikiAPI = 'https://en.wikipedia.org/wiki/';
 const form = document.querySelector(".form");
 const main = document.querySelector(".main");
 const search = document.getElementById("search");
@@ -14,7 +15,8 @@ function addCountryToPage(data){
     country.classList.add('country');
     country.innerHTML = `
     <h2 class="title">${data[0].name.common}</h2>
-    <img src="${data[0].flags.png}"/>
+    <a href="${wikiAPI+data[0].name.common }" target="_blank"><img src="${data[0].flags.png}"/></a>
+    <small>Click in the flag to be directed to Wikipedia.</small>
     <div class="information">
     <h4>${data[0].region}</h4>
     <p class="sub">Country in ${data[0].subregion}.</p>
