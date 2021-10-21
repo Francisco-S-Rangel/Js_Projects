@@ -11,3 +11,4 @@ Project 10: Weather App.
 Project 11: BMI Calculator.
 Project 12: Country Information.
 Project 13: Blurry Loading.
+Project 14: Vertical Slider.
