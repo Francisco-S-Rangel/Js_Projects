@@ -12,3 +12,4 @@ Project 11: BMI Calculator.
 Project 12: Country Information.
 Project 13: Blurry Loading.
 Project 14: Vertical Slider.
+Project 15: Random Choice Picker.
