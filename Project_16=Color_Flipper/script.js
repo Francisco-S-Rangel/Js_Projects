@@ -1,12 +1,13 @@
 const containerColor = document.querySelector(".container_color");
 const choseBtn = document.querySelector(".chose");
 const rgbBtn = document.querySelector(".rgb");
+let aux = 0;
 
 choseBtn.addEventListener('click',()=>{
     const choseColor = document.createElement('div');
     choseColor.classList.add("choseColor");
     choseColor.innerHTML = `
-    <form>
+    <form class="form">
     <select class="background" onchange="ColorChange(this)">
     <option value="random">Random</option>
     <option value="red">Red</option>
@@ -69,5 +70,36 @@ function pickRandomColor(){
             return 'black';
         case 10:
             return 'white';                                 
+    }
+}
+rgbBtn.addEventListener('click',()=>{
+    alert("\nObs: The pag will just respond if you insert the data correctly.\nSo check the data with attention !!");
+    const rgbColor = document.createElement("div");
+    rgbColor.classList.add("rgbColor");
+    rgbColor.innerHTML = `
+    <form class="form">
+    <p class="red" for="R">R: <input value="255" type="number" id="R" autocomplete="off" min="0" max="255" onchange="update()"/></p>
+    <p class="green" for="G">G: <input value="255" type="number" id="G" autocomplete="off" min="0" max="255" onchange="update()"/></p>
+    <p class="blue" for="B">B: <input value="255" type="number" id="B" autocomplete="off" min="0" max="255" onchange="update()"/></p>
+    </form>
+    `;
+    containerColor.innerHTML="";
+    containerColor.appendChild(rgbColor);
+});
+function update(){
+    choseBtn.style.color = "black";
+    rgbBtn.style.color = "black";
+    const red = document.getElementById("R");
+    const green = document.getElementById("G");
+    const blue = document.getElementById("B");
+    const aux = `rgb(${red.value},${green.value},${blue.value})`;
+    console.log(aux);
+    document.body.style.backgroundColor = aux;
+    document.querySelector(".apptitle").style.color = aux;
+    choseBtn.style.backgroundColor = aux;
+    rgbBtn.style.backgroundColor = aux;
+    if(red.value <= 40 && green.value <= 40 && blue.value <= 40){
+    choseBtn.style.color = "white";
+    rgbBtn.style.color = "white";
     }
 }
