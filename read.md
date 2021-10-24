@@ -13,3 +13,4 @@ Project 12: Country Information.
 Project 13: Blurry Loading.
 Project 14: Vertical Slider.
 Project 15: Random Choice Picker.
+Project 16: Color Flipper.
