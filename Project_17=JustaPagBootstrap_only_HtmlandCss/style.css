@@ -1,0 +1,183 @@
+* {
+    box-sizing:border-box;
+}
+body {
+    font-family: sans-serif,Arial, Times, serif;
+    margin: 0;
+    min-height: 100vh;
+}
+/*A barra preta na parte superior da pagina!*/
+nav {
+    display: flex;
+    align-items: center;
+    background: black;
+    height: 6vh;
+}
+.usuario_branco {
+    margin-left: 12rem;
+    width: 20px;
+    height: 20px;
+}
+.logotipo {
+    margin-left: 26rem;
+}
+.notificação_branco {
+    margin-left: 12rem;
+    width: 22px;
+    height: 22px;
+}
+.search {
+    background-color: rgb(101, 101, 101);
+    margin-left: 0.6rem;
+    height: 1.6rem;
+    width: 16rem;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    outline: none;
+    border: none;
+}
+.search::placeholder {
+    color: rgb(184, 184, 184);
+    align-items: center;
+}
+.search_button {
+    border: none;
+    height: 1.6rem;
+    background-color: gray;
+    align-items: center;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.lupa {
+    width: 16px;
+    height: 16px;
+}
+.setting_verde {
+    margin-left: 0.6rem;
+    width: 20px;
+    height: 20px;
+}
+/*<!-- A cinza abaixo da barra preta!*/
+.lower_header {
+    display: flex;
+    align-items: center;
+    background: rgb(236, 236, 236);
+    height: 4vh;
+}
+.primeiro_paragrafo {
+    margin-left: 20rem;
+}
+.praragrafo {
+    margin-left: 8rem;
+}
+/*A tela em sí!*/
+/*Cabeçalho já dentro da tela*/
+.Screen {
+    margin: 0;
+    margin-top: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.greenn {
+    color: rgb(7, 179, 7);
+}
+h4 {
+    margin-left: 4rem;
+}
+.upper_screen {
+    margin: 0;
+    margin-left: 160px;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    width: 1200px;
+    height: 1.6rem;
+}
+.proximos {
+    color: rgb(7, 179, 7);
+    margin-left: 1rem;
+}
+.eventos {
+    color: white;
+    margin-left: 1rem;
+}
+/*Quadros de Shown*/
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 140px;
+}
+.midle_screen {
+    margin-left: 160px;
+    margin-top: 26px;
+}
+.borda {
+    background: rgb(74, 74, 74);
+    width: 380px;
+    height: 240px;
+}
+.quadro {
+    width: 380px;
+    height: 200px;
+}
+.plus_symbol {
+    width: 380px;
+    height: 36px ;
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: 500;
+    color: rgb(7, 179, 7);
+    margin-left: 0.6rem;
+}
+.data {
+    width: 72px;
+    height: 36.2px;
+    background: rgb(105, 105, 105);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.6rem;
+}
+.mes {
+    color: white;
+    font-size: 0.8rem;
+}
+.dia {
+    font-size: 0.8rem;
+}
+.redesocial {
+    height: 36px;
+    width: max-content;
+    background: rgb(74, 74, 74);
+}
+.social {
+    width: 22px;
+    height: 22px;
+    margin-left: 0.6rem;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+.descricao {
+    width: 72x;
+    height: 36px;
+    margin-left: 0.8rem;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.6rem;
+}
+.desc {
+    font-size: 0.8rem;
+    color: white;
+    margin-left: 0.6rem;
+}
+.city {
+    font-size: 0.8rem;
+    margin-left: 0.6rem;
+}
+/*Rodapé da pg*/
+.informacao {
+    margin-top: 3.2rem;
+    margin-left: 18rem;
+}
