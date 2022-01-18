@@ -12,6 +12,8 @@ nav {
     align-items: center;
     background: black;
     height: 6vh;
+    position: relative;
+    flex-wrap: wrap;
 }
 .usuario_branco {
     margin-left: 12rem;
@@ -63,6 +65,7 @@ nav {
     align-items: center;
     background: rgb(236, 236, 236);
     height: 4vh;
+    position: relative;
 }
 .primeiro_paragrafo {
     margin-left: 20rem;
@@ -78,6 +81,8 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    flex-wrap: wrap;
 }
 .greenn {
     color: rgb(7, 179, 7);
@@ -89,6 +94,7 @@ h4 {
     margin: 0;
     margin-left: 160px;
     display: flex;
+    position: relative;
     align-items: center;
     background-color: black;
     width: 1200px;
@@ -116,6 +122,34 @@ h4 {
     background: rgb(74, 74, 74);
     width: 380px;
     height: 240px;
+}
+.star {
+    position: absolute;
+    background: rgba(74, 74, 74, 0.313);
+    margin-top: 152px;
+    width: 64px;
+    height: 32px;
+}
+.estrela_branca {
+    width: 24px;
+    height: 24px;
+    margin-left: 0.6rem;
+    margin-top: 2px;
+    display: flex;
+}
+.star2 {
+    position: absolute;
+    background: rgba(74, 74, 74, 0.313);
+    margin-top: 152px;
+    margin-left: 64px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+}
+.numero_estrela {
+    color: white;
+    margin-left: 0.6rem;
 }
 .quadro {
     width: 380px;
@@ -178,12 +212,15 @@ h4 {
 }
 /*Tabela da pg*/
 .informacao {
+    display: flex;
+    position: relative;
     margin-top: 3.2rem;
     margin-left: 18.4rem;
 }
 table,td {
     margin-left: 18.4rem;
     border: 0.3px solid rgb(197, 197, 197);
+    border-collapse: collapse;
     border-radius: 6.5px;
     padding: 5px;
     color: rgb(90, 206, 90);
@@ -194,6 +231,8 @@ table,td {
 }
 /*Rodapé*/
 .foot {
+    display: flex;
+    position: relative;
     margin-top: 1.6rem;
     background: black;
     height: 2vh;
