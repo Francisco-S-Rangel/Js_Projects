@@ -176,8 +176,25 @@ h4 {
     font-size: 0.8rem;
     margin-left: 0.6rem;
 }
-/*Rodapé da pg*/
+/*Tabela da pg*/
 .informacao {
     margin-top: 3.2rem;
-    margin-left: 18rem;
+    margin-left: 18.4rem;
+}
+table,td {
+    margin-left: 18.4rem;
+    border: 0.3px solid rgb(197, 197, 197);
+    border-radius: 6.5px;
+    padding: 5px;
+    color: rgb(90, 206, 90);
+}
+.verde {
+    background: rgb(90, 206, 90);
+    color: white;
+}
+/*Rodapé*/
+.foot {
+    margin-top: 1.6rem;
+    background: black;
+    height: 2vh;
 }
