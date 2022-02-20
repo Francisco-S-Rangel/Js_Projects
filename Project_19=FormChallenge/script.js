@@ -92,7 +92,12 @@ function isCharacterALetter(char) {
 btnValidar.addEventListener('click',()=>{
     if(checkValidador.checked){
         console.log("checked");
+        if( contador >= 5 && contador2 >= 5 && contador3 >=1){
+            window.alert("Os tres campos foram respondidos como esperado.\nO Formulario foi validado!");
+        }else{
+            window.alert("Os tres campos não foram respondidos como esperado.\nO Formulario não foi validado!");
+        }
     }else{
-        console.log("uncheked");
+        window.alert("O Formulario foi validado no entanto pode conter erros, já que o campo de 'forçar campos obrigatórios' não foi selecionado!!");
     }
 });
