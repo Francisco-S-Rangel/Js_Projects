@@ -28,6 +28,9 @@ checkValidador.addEventListener('click',()=>{
         astA.textContent = ` `;
         astB.textContent = ` `;
         astC.textContent = ` `;
+        contador = 0;
+        contador2 = 0;
+        contador3 = 0;
     }
 });
 inputNome.addEventListener("keyup",(e)=>{
