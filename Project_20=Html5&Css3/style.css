@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ramaraja&display=swap');
+
 * {
     box-sizing: border-box;
 }
@@ -6,18 +8,44 @@ body {
     background-color: gray;
     
 }
+h1 {
+    font-family: 'Ramaraja', serif;
+    color: rgb(241, 241, 241);
+}
+h3 {
+    font-family: 'Times New Roman', Times, serif;
+}
 /*Header*/
 .navbar-brand {
     color: white;
 }
 /*Imagem*/
-.paisagem {
-    margin-top: 40px;
-    height: 320px;
+.caixa {
+    margin-top: 32px;
     width: 320px;
+    height: 320px;
+    background-color: rgb(44, 44, 44);
+
+}
+.paisagem {
+    height: 280px;
+    width: 280px;
+}
+.dropdown-menu {
+    background-color: rgb(235, 235, 235);
+    color: white;
+}
+.dropdown-item {
+    background-color: rgb(196, 196, 196);
+    color: white;
 }
 /*Footer*/
-
+.footer {
+   max-width: max-content;
+   width: auto;
+   height: 12px;
+   background-color: black;
+}
 
 /* Extra small devices (phones, 600px and down) 
 @media only screen and (max-width: 768px) { 
