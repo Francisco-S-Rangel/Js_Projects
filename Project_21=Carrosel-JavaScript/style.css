@@ -161,6 +161,12 @@ h6 {
     background-color: rgb(253, 133, 133);
     cursor: pointer;
 }
+/*Tabela Slide*/
+.pais {
+  font-size: 18px;
+  font-weight: 600;
+  color:  rgb(9, 255, 214);
+}
 /*Tabela Dinâmica*/
 .td .hidden{
     display: none;

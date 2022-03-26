@@ -6,13 +6,16 @@ const main = document.querySelector(".main");
 const slides = document.querySelectorAll(".slide");
 const slideIcons = document.querySelectorAll(".slide-icon");
 
-//todos os botoes(i) para criação da tabela 
+//todos os botoes(i) para criação da Tabela de Slide
 const btnInglaterra = document.getElementById("inglaterra");
 const btnEUA = document.getElementById("eua");
 const btnBrasil = document.getElementById("brasil");
 const btnFranca = document.getElementById("franca");
 const btnCanada = document.getElementById("canada");
 
+//Variaveis para a criação da tabela de Slide
+const tabelaslide = document.querySelector(".tabelaslide");
+//variaveis para o passar dos slides
 const numberOfSlides = slides.length;
 var slideNumber = 0;
 
@@ -56,7 +59,26 @@ prevBtn.addEventListener("click", () => {
 
 //botão para a criação da tabela inglaterra
 btnInglaterra.addEventListener('click',()=>{
-  console.log("Inglaterra");
+  //Limpar tabela
+  tabelaslide.innerHTML=``;
+  //Inserir Nova Tabela
+  tabelaslide.innerHTML= `
+              <tr>
+                <td class="pais">Inglaterra</td>
+                <td>R$ 5800</td>
+                <td>Londres</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>R$ 6600</td>
+                <td>Manchester</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>R$ 7200</td>
+                <td>Birmingham</td>
+              </tr>
+   `;
 });
 
 //botão para a criação da tabela eua
@@ -79,7 +101,7 @@ btnCanada.addEventListener('click',()=>{
   console.log("Canada");
 });
 
-
+//------------------------------------------------------
 // Tabela Dinamica
 const adicionarBtn = document.getElementById("btn_criar");
 const tabela = document.querySelector(".tabel");
