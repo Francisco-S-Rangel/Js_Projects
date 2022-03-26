@@ -83,22 +83,94 @@ btnInglaterra.addEventListener('click',()=>{
 
 //botão para a criação da tabela eua
 btnEUA.addEventListener('click',()=>{
-  console.log("Eua");
+  tabelaslide.innerHTML=``;
+  //Inserir Nova Tabela
+  tabelaslide.innerHTML= `
+              <tr>
+                <td class="pais">Estados Unidos</td>
+                <td>R$ 3600</td>
+                <td>Nova York</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>R$ 2980</td>
+                <td>Miami</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>R$ 4200</td>
+                <td>Los Angeles</td>
+              </tr>
+   `;
 });
 
 //botão para a criação da tabela brazil
 btnBrasil.addEventListener('click',()=>{
-  console.log("Brazil");
+  tabelaslide.innerHTML=``;
+  //Inserir Nova Tabela
+  tabelaslide.innerHTML= `
+              <tr>
+                <td class="pais">Brasil</td>
+                <td>R$ 450</td>
+                <td>Brasil</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>R$ 620</td>
+                <td>Rio de Janeiro</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>R$ 760</td>
+                <td>Salvador</td>
+              </tr>
+   `;
 });
 
 //botão para a criação da tabela frança
 btnFranca.addEventListener('click',()=>{
-  console.log("França");
+  tabelaslide.innerHTML=``;
+  //Inserir Nova Tabela
+  tabelaslide.innerHTML= `
+              <tr>
+                <td class="pais">França</td>
+                <td>R$ 4500</td>
+                <td>Paris</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>R$ 5200</td>
+                <td>Nice</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>R$ 7600</td>
+                <td>Monaco</td>
+              </tr>
+   `;
 });
 
 //botão para a criação da tabela canda
 btnCanada.addEventListener('click',()=>{
-  console.log("Canada");
+  tabelaslide.innerHTML=``;
+  //Inserir Nova Tabela
+  tabelaslide.innerHTML= `
+              <tr>
+                <td class="pais">Canada</td>
+                <td>R$ 3200</td>
+                <td>Toronto</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>R$ 4980</td>
+                <td>Montreal</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>R$ 5200</td>
+                <td>vancouver</td>
+              </tr>
+   `;
 });
 
 //------------------------------------------------------
