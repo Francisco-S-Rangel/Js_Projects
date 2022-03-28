@@ -161,6 +161,9 @@ h6 {
     background-color: rgb(253, 133, 133);
     cursor: pointer;
 }
+.mensagem {
+  color: white;
+}
 /*Tabela Slide*/
 .pais {
   font-size: 18px;

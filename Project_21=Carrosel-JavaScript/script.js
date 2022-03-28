@@ -1,3 +1,4 @@
+//Variaveis para que o slide possa acontecer
 const slider = document.querySelector(".slider");
 const nextBtn = document.querySelector(".next-btn");
 const prevBtn = document.querySelector(".prev-btn");
@@ -176,9 +177,13 @@ btnCanada.addEventListener('click',()=>{
 //------------------------------------------------------
 // Tabela Dinamica
 const adicionarBtn = document.getElementById("btn_criar");
+const enviarBtn = document.getElementById("btn_enviar");
+const msg = document.querySelector(".mensagem");
 const tabela = document.querySelector(".tabel");
+let validador =0;
 
 adicionarBtn.addEventListener('click',()=>{
+  validador++;
     newTr();
 });
 function newTr(){
@@ -217,8 +222,26 @@ function newTr(){
     });
 
     deleteBtn.addEventListener('click',()=>{
+      validador--;
         novoTr.remove();
     });
+
   
     tabela.appendChild(novoTr);
 }
+function apagar(){
+  setTimeout(()=> { msg.innerHTML=``;},3000);
+}
+//Eniar dados da tabela dinamica
+enviarBtn.addEventListener('click',()=>{
+  console.log(validador);
+  if(validador == 0){
+    msg.innerHTML=`Dados não foram enviados pois não foram inserido!`;
+    apagar();
+  }
+  else{
+  tabela.innerHTML = ``;
+  msg.innerHTML=`Dados enviados, Logo entraremos em contato!`;
+  apagar();}
+  validador=0;
+});
