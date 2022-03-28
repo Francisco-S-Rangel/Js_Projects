@@ -38,6 +38,107 @@ h6 {
     background-color: rgb(116, 116, 116);
     color: white;
 }
+/*Botão de Favoritar*/
+.fav-btn {
+    border: none;
+    background-color: rgba(49, 169, 206, 0.842);
+    border-radius: 10%;
+    width: 2.2rem;
+    height: 3.3rem;
+    color: rgb(210, 211, 243);
+    cursor: pointer;
+    font-size: 1.8rem;
+}
+.fav-btn2 {
+  border: none;
+  background-color: rgba(49, 169, 206, 0.842);
+  border-radius: 10%;
+  width: 2.2rem;
+  height: 3.3rem;
+  color: rgb(210, 211, 243);
+  cursor: pointer;
+  font-size: 1.8rem;
+}
+.fav-btn3 {
+  border: none;
+  background-color: rgba(49, 169, 206, 0.842);
+  border-radius: 10%;
+  width: 2.2rem;
+  height: 3.3rem;
+  color: rgb(210, 211, 243);
+  cursor: pointer;
+  font-size: 1.8rem;
+}
+.fav-btn4 {
+  border: none;
+  background-color: rgba(49, 169, 206, 0.842);
+  border-radius: 10%;
+  width: 2.2rem;
+  height: 3.3rem;
+  color: rgb(210, 211, 243);
+  cursor: pointer;
+  font-size: 1.8rem;
+}
+.fav-btn5 {
+  border: none;
+  background-color: rgba(49, 169, 206, 0.842);
+  border-radius: 10%;
+  width: 2.2rem;
+  height: 3.3rem;
+  color: rgb(210, 211, 243);
+  cursor: pointer;
+  font-size: 1.8rem;
+}
+.fav-btn.active {
+  border: none;
+  background-color: rgba(49, 169, 206, 0.842);
+  border-radius: 10%;
+  width: 2.2rem;
+  height: 3.3rem;
+  color: rgb(235, 95, 95);
+  cursor: pointer;
+  font-size: 1.8rem;
+}
+.fav-btn2.active {
+  border: none;
+  background-color: rgba(49, 169, 206, 0.842);
+  border-radius: 10%;
+  width: 2.2rem;
+  height: 3.3rem;
+  color: rgb(235, 95, 95);
+  cursor: pointer;
+  font-size: 1.8rem;
+}
+.fav-btn3.active {
+  border: none;
+  background-color: rgba(49, 169, 206, 0.842);
+  border-radius: 10%;
+  width: 2.2rem;
+  height: 3.3rem;
+  color: rgb(235, 95, 95);
+  cursor: pointer;
+  font-size: 1.8rem;
+}
+.fav-btn4.active {
+  border: none;
+  background-color: rgba(49, 169, 206, 0.842);
+  border-radius: 10%;
+  width: 2.2rem;
+  height: 3.3rem;
+  color: rgb(235, 95, 95);
+  cursor: pointer;
+  font-size: 1.8rem;
+}
+.fav-btn5.active {
+  border: none;
+  background-color: rgba(49, 169, 206, 0.842);
+  border-radius: 10%;
+  width: 2.2rem;
+  height: 3.3rem;
+  color: rgb(235, 95, 95);
+  cursor: pointer;
+  font-size: 1.8rem;
+}
 /*Slider*/
 .centrarImagem {
     display: flex;
