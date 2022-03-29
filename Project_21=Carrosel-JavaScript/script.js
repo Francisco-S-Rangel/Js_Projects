@@ -238,7 +238,7 @@ function newTr(){
 
     novoTr.innerHTML = `
     <td><input class="text" /></td>
-    <td><input class="text2" /></td>
+    <td><input type="number" class="text2" /></td>
     <td><input class="text3" /></td>
     <td>
     <button class="editar"><i class="fas fa-edit"></i></button>
