@@ -12,7 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.29.2/sweetalert2.all.js"></script>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
 </head>
@@ -25,24 +25,32 @@
 
         <div class="row">
 
-            <div class="col-12 col-lg-6 caixa-esquerda">
+            <div class="col-12 col-lg-6 caixa-esquerda text-center">
 
-                <div class="col-lg-4 mt-3 text-center  mt-5 mb-5">
-                    <img class="tela " src="https://http2.mlstatic.com/D_NQ_NP_654659-MLB49053797511_022022-O.webp" />
+                <div class="col-lg-4  text-center">
+                    <img class="tela " id="imagem" src="https://static.fecam.net.br/thumbs/858/2838133_resize_380_600.jpg" />
                 </div>
-
+                <div class="d-flex ">
+                    <div class="numero-urna" id="num-urna1">&nbsp;&nbsp;</div>
+                    <div class="numero-urna2" id="num-urna2">&nbsp;&nbsp;</div> 
+                </div>
+                <div class="d-flex">
+                    <p style="display:none;color:blue" id="candidato" class="descricao" > <b>NOME: </b> </p>
+                    <p style="display:none" id="confirmar" class="descricao">CLIQUE NO BOTÃO <b style="color:red">CANCELAR</b> PARA CORRIGIR O VOTO.</p>
+                    <p style="display:none" id="corrigir" class="descricao">CLIQUE NO BOTÃO <b style="color:green">CONFIRMA</b> PARA CONFIRMAR O VOTO.</p>
+                </div>
             </div>
 
             <div class="col-12 col-lg-6 caixa-direita">
                 <div class="col-12 caixa-branca mt-3 mb-3 ">
                     <img class="imagem_justica"
                         src="http://www.plantaoangelica.com.br//images/materias/57277_45492_59440.jpg" />
-                    <span class="titulo_logo">JUSTIÇA ELEITORAL</span>
+                    <span class="titulo_logo">JUSTIÇA ELEITORAL  </span>
                 </div>
 
                 <div class="col-12">
 
-                    <table class="table table-borderless ">
+                    <table class="table table-borderless">
 
                         <tbody>
                             <tr>
@@ -51,34 +59,34 @@
                                 <td></td>
                             </tr>
                             <tr>
-                                <td><button type="button" class="btn btn-secondary"> <b>1</b> </button></td>
-                                <td><button type="button" class="btn btn-secondary"> <b>2</b> </button></td>
-                                <td><button type="button" class="btn btn-secondary"> <b>3</b> </button></td>
+                                <td><button type="button" value="1" class="btn btn-secondary" onclick="digitando(this.value)"> <b>1</b> </button></td>
+                                <td><button type="button" value="2" class="btn btn-secondary" onclick="digitando(this.value)"> <b>2</b> </button></td>
+                                <td><button type="button" value="3" class="btn btn-secondary" onclick="digitando(this.value)"> <b>3</b> </button></td>
                             </tr>
                             <tr>
-                                <td><button type="button" class="btn btn-secondary"> <b>4</b> </button></td>
-                                <td><button type="button" class="btn btn-secondary"> <b>5</b> </button></td>
-                                <td><button type="button" class="btn btn-secondary"> <b>6</b> </button></td>
+                                <td><button type="button" value="4" class="btn btn-secondary" onclick="digitando(this.value)"> <b>4</b> </button></td>
+                                <td><button type="button" value="5" class="btn btn-secondary" onclick="digitando(this.value)"> <b>5</b> </button></td>
+                                <td><button type="button" value="6" class="btn btn-secondary" onclick="digitando(this.value)"> <b>6</b> </button></td>
                             </tr>
                             <tr>
-                                <td><button type="button" class="btn btn-secondary"> <b>7</b> </button></td>
-                                <td><button type="button" class="btn btn-secondary"> <b>8</b> </button></td>
-                                <td><button type="button" class="btn btn-secondary"> <b>9</b> </button></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td><button type="button" class="btn btn-secondary">   <b>0</b>   </button></td>
-                                <td></td>
+                                <td><button type="button" value="7" class="btn btn-secondary" onclick="digitando(this.value)"> <b>7</b> </button></td>
+                                <td><button type="button" value="8" class="btn btn-secondary" onclick="digitando(this.value)"> <b>8</b> </button></td>
+                                <td><button type="button" value="9" class="btn btn-secondary" onclick="digitando(this.value)"> <b>9</b> </button></td>
                             </tr>
                             <tr>
                                 <td></td>
+                                <td><button type="button" value="0" class="btn btn-secondary" onclick="digitando(this.value)">   <b>0</b>   </button></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
-                                <td><button type="button" class="btn btn-light">BRANCO</button></td>
-                                <td><button type="button" class="btn btn-danger">CORRIGE</button></td>
-                                <td><button type="button" class="btn btn-success">CONFIRMA</button></td>
+                                <td><button type="button" class="btn btn-light" id="botao-branco"onclick="branco()">BRANCO</button></td>
+                                <td><button type="button" class="btn btn-danger" id="botao-corrige" onclick="corrige()">CORRIGE</button></td>
+                                <td><button type="button" class="btn btn-success" id="botao-confirma" onclick="confirma()">CONFIRMA</button></td>
                             </tr>
                             <tr>
                                 <td></td>

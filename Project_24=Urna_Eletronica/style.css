@@ -22,9 +22,7 @@ body {
 }
 .caixa-esquerda {
     border-right:  3px solid rgb(154, 154, 154);
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
+    
 }
 .caixa-direita {
     background-color: rgb(46, 46, 46);
@@ -34,10 +32,24 @@ body {
     background-color: whitesmoke;
     border-radius: 5px;
     width: max-content;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    
+}
+.numero-urna {
+    color: rgb(66, 66, 176);
+    font-size: 60px;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-left: 16rem;
+}
+.descricao {
+    font-size: 18px;
+    font-weight: 600;
+}
+.numero-urna2 {
+    color: rgb(66, 66, 176);
+    font-size: 60px;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-left: 1rem;
 }
 .titulo_logo {
     position: relative;
@@ -51,8 +63,9 @@ body {
 .tela {
     border: 5px solid rgb(76, 76, 76);
     border-radius: 3px;
-    width: 39.4rem;
-    height: 30rem;
+    width: 26rem;
+    height: 24rem;
+    margin-left: 6rem;
 }
 .imagem_justica {
     border-radius: 5px;
@@ -79,8 +92,8 @@ body {
     font-weight: 600;
     padding: 14px 24px;
 }
-.table tbody {
-    
+.table {
+    background-color:  rgb(43, 43, 43);
     border: 3px solid rgb(76, 76, 76);
 }
 .table tr td{
