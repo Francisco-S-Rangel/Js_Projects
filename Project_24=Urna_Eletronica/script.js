@@ -1,11 +1,11 @@
 
-let candidato = document.getElementById("candidato");
-let confirmar = document.getElementById("confirmar");
-let corrigir = document.getElementById("corrigir");
-let img = document.getElementById("imagem");
+const candidato = document.getElementById("candidato");
+const confirmar = document.getElementById("confirmar");
+const corrigir = document.getElementById("corrigir");
+const img = document.getElementById("imagem");
 
-let numeroUrna1 = document.getElementById("num-urna1");
-let numeroUrna2 = document.getElementById("num-urna2");
+const numeroUrna1 = document.getElementById("num-urna1");
+const numeroUrna2 = document.getElementById("num-urna2");
 let numerosDigitados="";
 let contador=0;
 
@@ -17,7 +17,7 @@ let eneas=0;
 let putin = 0;
 let votoBranco =0;
 
-const candidados = [
+const candidatos = [
     {
         numero:13,
         nome: "lula",
