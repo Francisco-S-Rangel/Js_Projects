@@ -19,6 +19,98 @@
 
 <body>
 
+    <div class="container-fluid caixa-principal-maquina">
+        <div class="col-12 mt-3 text-center">
+            <h1 class="titulo">MÁQUINA DE VENDAS</h1>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-4 ">
+
+            </div>
+
+            <div class="col-12 col-lg-4">
+                <div class="col-12 text-center mb-2">
+                    <span class="supertitulo">Produto Selecionados</span>
+                </div>
+                <div class="col-12 text-center mt-5">
+                    <button type="button" class="btn btn-outline-success">+</button>
+                </div>
+                <div class="col-12 text-center mt-5 mb-5">
+                    <span class="numerosTrocando">3</span>
+                </div>
+                <div class="col-12 text-center">
+                    <button type="button" class="btn btn-outline-danger">-</button>
+                </div>
+
+            </div>
+
+            <div class="col-12 col-lg-4 mt-3">
+
+                <div class="col-12 text-center mb-2">
+                    <h1 class="supertitulo">Saldo</h1>
+                </div>
+                <div class="col-12 text-center mb-2">
+                    <h1 class="supertitulo2">R$ <span class="supertitulo3">17,55</span></h1>
+                </div>
+
+                <table class="table table-borderless">
+
+                    <tbody>
+                        <tr>
+                            <td><button type="button" value="1" class="btn btn-secondary"
+                                    onclick="digitando(this.value)">
+                                    <b>1</b> </button></td>
+                            <td><button type="button" value="2" class="btn btn-secondary"
+                                    onclick="digitando(this.value)">
+                                    <b>2</b> </button></td>
+                            <td><button type="button" value="3" class="btn btn-secondary"
+                                    onclick="digitando(this.value)">
+                                    <b>3</b> </button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" value="4" class="btn btn-secondary"
+                                    onclick="digitando(this.value)">
+                                    <b>4</b> </button></td>
+                            <td><button type="button" value="5" class="btn btn-secondary"
+                                    onclick="digitando(this.value)">
+                                    <b>5</b> </button></td>
+                            <td><button type="button" value="6" class="btn btn-secondary"
+                                    onclick="digitando(this.value)">
+                                    <b>6</b> </button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" value="7" class="btn btn-secondary"
+                                    onclick="digitando(this.value)">
+                                    <b>7</b> </button></td>
+                            <td><button type="button" value="8" class="btn btn-secondary"
+                                    onclick="digitando(this.value)">
+                                    <b>8</b> </button></td>
+                            <td><button type="button" value="9" class="btn btn-secondary"
+                                    onclick="digitando(this.value)">
+                                    <b>9</b> </button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" class="btn btn-danger" id="botao-cancela"
+                                onclick="corrige()">CANCELAR</button></td>
+                            <td><button type="button" value="0" class="btn btn-secondary"
+                                    onclick="digitando(this.value)">
+                                    <b>0</b> </button></td>
+                            <td><button type="button" class="btn btn-success" id="botao-confirma"
+                                        onclick="confirma()">CONFIRMA</button></td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+
+                <div class="col-12 text-center mt-3 mb-5">
+                    <button type="button" class="btn btn-info">Retirar dinheiro</button>
+                </div>
+
+
+
+            </div>
+        </div>
+
 </body>
 
 </html>
