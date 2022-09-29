@@ -184,17 +184,22 @@ function comprar(){
             let saldoDisbonivel = parseInt(saldo.innerHTML);
 
             let novoSaldo = saldoDisbonivel - preco;
-
-            saldo.innerHTML = novoSaldo;
-            produtoestoque1 = produtoestoque1 - quantidade;
-            estoque1.innerHTML = produtoestoque1;
-            Swal.fire({
-                position: 'top-end',
-                icon: 'success',
-                title: 'Compra realizada com sucesso',
-                showConfirmButton: false,
-                timer: 1500
-              })
+            if(novoSaldo >= 0 ){
+                saldo.innerHTML = novoSaldo;
+                produtoestoque1 = produtoestoque1 - quantidade;
+                estoque1.innerHTML = produtoestoque1;
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Compra realizada com sucesso',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+            }else {
+                Swal.fire(
+                    'Saldo insuficiente para a combra!'
+                )
+            }
         }
     }else if(produtoAtual == 2){
         let quantidade = parseInt(quantidadeProduto.innerHTML);
@@ -207,7 +212,7 @@ function comprar(){
             let saldoDisbonivel = parseInt(saldo.innerHTML);
 
             let novoSaldo = saldoDisbonivel - preco;
-
+            if(novoSaldo >= 0 ){
             saldo.innerHTML = novoSaldo;
             produtoestoque2 = produtoestoque2 - quantidade;
             estoque2.innerHTML = produtoestoque2;
@@ -218,6 +223,11 @@ function comprar(){
                 showConfirmButton: false,
                 timer: 1500
               })
+            }else {
+                Swal.fire(
+                    'Saldo insuficiente para a combra!'
+                )
+            }
         }
     }else if(produtoAtual == 3){
         let quantidade = parseInt(quantidadeProduto.innerHTML);
@@ -231,6 +241,7 @@ function comprar(){
 
             let novoSaldo = saldoDisbonivel - preco;
 
+            if(novoSaldo >= 0 ){
             saldo.innerHTML = novoSaldo;
             produtoestoque3 = produtoestoque3 - quantidade;
             estoque3.innerHTML = produtoestoque3;
@@ -241,6 +252,11 @@ function comprar(){
                 showConfirmButton: false,
                 timer: 1500
               })
+            }else {
+                Swal.fire(
+                    'Saldo insuficiente para a combra!'
+                )
+            }
         }
     }else if(produtoAtual == 4){
         let quantidade = parseInt(quantidadeProduto.innerHTML);
@@ -253,7 +269,7 @@ function comprar(){
             let saldoDisbonivel = parseInt(saldo.innerHTML);
 
             let novoSaldo = saldoDisbonivel - preco;
-
+            if(novoSaldo >= 0 ){
             saldo.innerHTML = novoSaldo;
             produtoestoque4 = produtoestoque4 - quantidade;
             estoque4.innerHTML = produtoestoque4;
@@ -264,6 +280,11 @@ function comprar(){
                 showConfirmButton: false,
                 timer: 1500
               })
+            }else {
+                Swal.fire(
+                    'Saldo insuficiente para a combra!'
+                )
+            }
         }
     }else if(produtoAtual == 5){
         let quantidade = parseInt(quantidadeProduto.innerHTML);
@@ -276,7 +297,7 @@ function comprar(){
             let saldoDisbonivel = parseInt(saldo.innerHTML);
 
             let novoSaldo = saldoDisbonivel - preco;
-
+            if(novoSaldo >= 0 ){
             saldo.innerHTML = novoSaldo;
             produtoestoque5 = produtoestoque5 - quantidade;
             estoque5.innerHTML = produtoestoque5;
@@ -286,7 +307,11 @@ function comprar(){
                 title: 'Compra realizada com sucesso',
                 showConfirmButton: false,
                 timer: 1500
-              })
+              }) }else {
+                Swal.fire(
+                    'Saldo insuficiente para a combra!'
+                )
+            }
         }
     }
 }
