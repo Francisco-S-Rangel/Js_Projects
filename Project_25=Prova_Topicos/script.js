@@ -2,46 +2,54 @@ const saldo = document.getElementById("saldo");
 const deposito = document.getElementById("deposito");
 
 saldo.innerHTML = '0';
-let contador=0;
-let valorSaldo=0;
+let contador = 0;
+let valorSaldo = 0;
 
-function digitando(valor){
+function digitando(valor) {
 
-    if(contador == 3)
-    {
+    if (contador == 3) {
         Swal.fire(
             'O valor maximo de deposito é R$999!'
         )
-    }else if(contador == 0){
+    } else if (contador == 0) {
         contador++;
         valorSaldo = valorSaldo + valor;
         valorSaldo = parseInt(valorSaldo);
         deposito.innerHTML = valorSaldo;
     }
-    else
-    {
+    else {
         contador++;
         valorSaldo = valorSaldo + valor;
         valorSaldo = parseInt(valorSaldo);
         deposito.innerHTML = valorSaldo;
     }
 
-   
+
 }
 
-function confirma(){
-    valorSaldo = parseInt(valorSaldo);
-    saldo.innerHTML = valorSaldo;
+function confirma() {
+    if (saldo.innerHTML !== "0") {
+        valorSaldo = parseInt(valorSaldo);
+        antigoSaldo = parseInt(saldo.innerHTML);
+        resultado = valorSaldo + antigoSaldo;
+        saldo.innerHTML = resultado;
+        deposito.innerHTML = '';
+        contador = 0
+        valorSaldo = 0;
+    } else {
+        valorSaldo = parseInt(valorSaldo);
+        saldo.innerHTML = valorSaldo;
+        deposito.innerHTML = '';
+        contador = 0
+        valorSaldo = 0;
+    }
+}
+function cancela() {
     deposito.innerHTML = '';
     contador = 0
     valorSaldo = 0;
 }
-function cancela(){
-    deposito.innerHTML = '';
-    contador = 0
-    valorSaldo = 0;
-}
-function retirarDinheiro(){
+function retirarDinheiro() {
     saldo.innerHTML = '0';
     deposito.innerHTML = '';
     contador = 0
@@ -50,28 +58,29 @@ function retirarDinheiro(){
 
 const quantidadeProduto = document.getElementById("quantidadeProduto");
 quantidadeProduto.innerHTML = '0';
-let contador2=0;
+let contador2 = 0;
 
-function adicionar(){  
-    if(produtoEscolhido == false){
+function adicionar() {
+    if (produtoEscolhido == false) {
         Swal.fire(
             'Escolha um produto antes!'
         )
-    }else{
-    contador2 ++;
-    quantidadeProduto.innerHTML = contador2;}
+    } else {
+        contador2++;
+        quantidadeProduto.innerHTML = contador2;
+    }
 }
 
-function sub(){
-    if(produtoEscolhido == false){
+function sub() {
+    if (produtoEscolhido == false) {
         Swal.fire(
             'Escolha um produto antes!'
         )
     }
-    else if(contador2 <= 0){
+    else if (contador2 <= 0) {
 
-    }else{
-        contador2 --;
+    } else {
+        contador2--;
         quantidadeProduto.innerHTML = contador2;
     }
 }
@@ -79,71 +88,71 @@ function sub(){
 const produtoSelecionado = document.getElementById("produtoSelecionado");
 produtoSelecionado.innerHTML = '?';
 produtoEscolhido = false;
-produtoAtual=0;
+produtoAtual = 0;
 
-function produto1(){
-    if(saldo.innerHTML == '0'){
+function produto1() {
+    if (saldo.innerHTML == '0') {
         Swal.fire(
             'Deposite seu saldo antes!'
         )
-    }else{
-    produtoSelecionado.innerHTML = 'Barra de Chocolate';
-    produtoEscolhido = true;
-    quantidadeProduto.innerHTML = '0';
-    contador2=0;
-    produtoAtual=1;
+    } else {
+        produtoSelecionado.innerHTML = 'Barra de Chocolate';
+        produtoEscolhido = true;
+        quantidadeProduto.innerHTML = '0';
+        contador2 = 0;
+        produtoAtual = 1;
     }
 }
-function produto2(){
-    if(saldo.innerHTML == '0'){
+function produto2() {
+    if (saldo.innerHTML == '0') {
         Swal.fire(
             'Deposite seu saldo antes!'
         )
-    }else{
-    produtoSelecionado.innerHTML = 'Salgadinho';
-    produtoEscolhido = true;
-    quantidadeProduto.innerHTML = '0';
-    contador2=0;
-    produtoAtual=2;
+    } else {
+        produtoSelecionado.innerHTML = 'Salgadinho';
+        produtoEscolhido = true;
+        quantidadeProduto.innerHTML = '0';
+        contador2 = 0;
+        produtoAtual = 2;
     }
 }
-function produto3(){
-    if(saldo.innerHTML == '0'){
+function produto3() {
+    if (saldo.innerHTML == '0') {
         Swal.fire(
             'Deposite seu saldo antes!'
         )
-    }else{
-    produtoSelecionado.innerHTML = 'Refrigerante';
-    produtoEscolhido = true;
-    quantidadeProduto.innerHTML = '0';
-    contador2=0;
-    produtoAtual=3;
+    } else {
+        produtoSelecionado.innerHTML = 'Refrigerante';
+        produtoEscolhido = true;
+        quantidadeProduto.innerHTML = '0';
+        contador2 = 0;
+        produtoAtual = 3;
     }
 }
-function produto4(){
-    if(saldo.innerHTML == '0'){
+function produto4() {
+    if (saldo.innerHTML == '0') {
         Swal.fire(
             'Deposite seu saldo antes!'
         )
-    }else{
-    produtoSelecionado.innerHTML = 'Bolacha/Biscoito';
-    produtoEscolhido = true;
-    quantidadeProduto.innerHTML = '0';
-    contador2=0;
-    produtoAtual=4;
+    } else {
+        produtoSelecionado.innerHTML = 'Bolacha/Biscoito';
+        produtoEscolhido = true;
+        quantidadeProduto.innerHTML = '0';
+        contador2 = 0;
+        produtoAtual = 4;
     }
 }
-function produto5(){
-    if(saldo.innerHTML == '0'){
+function produto5() {
+    if (saldo.innerHTML == '0') {
         Swal.fire(
             'Deposite seu saldo antes!'
         )
-    }else{
-    produtoSelecionado.innerHTML = 'Kinder Ovo';
-    produtoEscolhido = true;
-    quantidadeProduto.innerHTML = '0';
-    contador2=0;
-    produtoAtual=5;
+    } else {
+        produtoSelecionado.innerHTML = 'Kinder Ovo';
+        produtoEscolhido = true;
+        quantidadeProduto.innerHTML = '0';
+        contador2 = 0;
+        produtoAtual = 5;
     }
 }
 
@@ -163,28 +172,28 @@ estoque3.innerHTML = produtoestoque3;
 estoque4.innerHTML = produtoestoque4;
 estoque5.innerHTML = produtoestoque5;
 
-function comprar(){
-    if(produtoEscolhido == false){
+function comprar() {
+    if (produtoEscolhido == false) {
         Swal.fire(
             'Escolha um produto e sua quantidade antes!'
         )
-    }else if(contador2 == 0){
+    } else if (contador2 == 0) {
         Swal.fire(
             'Selecione a quantidade do produto antes!'
         )
 
-    }else if(produtoAtual == 1){
+    } else if (produtoAtual == 1) {
         let quantidade = parseInt(quantidadeProduto.innerHTML);
-        if(quantidade > produtoestoque1){
+        if (quantidade > produtoestoque1) {
             Swal.fire(
                 'Infelizmente não temos essa quantidade no estoque!'
             )
-        }else{
+        } else {
             let preco = 5 * quantidade;
             let saldoDisbonivel = parseInt(saldo.innerHTML);
 
             let novoSaldo = saldoDisbonivel - preco;
-            if(novoSaldo >= 0 ){
+            if (novoSaldo >= 0) {
                 saldo.innerHTML = novoSaldo;
                 produtoestoque1 = produtoestoque1 - quantidade;
                 estoque1.innerHTML = produtoestoque1;
@@ -194,120 +203,121 @@ function comprar(){
                     title: 'Compra realizada com sucesso',
                     showConfirmButton: false,
                     timer: 1500
-                  })
-            }else {
+                })
+            } else {
                 Swal.fire(
                     'Saldo insuficiente para a combra!'
                 )
             }
         }
-    }else if(produtoAtual == 2){
+    } else if (produtoAtual == 2) {
         let quantidade = parseInt(quantidadeProduto.innerHTML);
-        if(quantidade > produtoestoque2){
+        if (quantidade > produtoestoque2) {
             Swal.fire(
                 'Infelizmente não temos essa quantidade no estoque!'
             )
-        }else{
+        } else {
             let preco = 7 * quantidade;
             let saldoDisbonivel = parseInt(saldo.innerHTML);
 
             let novoSaldo = saldoDisbonivel - preco;
-            if(novoSaldo >= 0 ){
-            saldo.innerHTML = novoSaldo;
-            produtoestoque2 = produtoestoque2 - quantidade;
-            estoque2.innerHTML = produtoestoque2;
-            Swal.fire({
-                position: 'top-end',
-                icon: 'success',
-                title: 'Compra realizada com sucesso',
-                showConfirmButton: false,
-                timer: 1500
-              })
-            }else {
+            if (novoSaldo >= 0) {
+                saldo.innerHTML = novoSaldo;
+                produtoestoque2 = produtoestoque2 - quantidade;
+                estoque2.innerHTML = produtoestoque2;
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Compra realizada com sucesso',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            } else {
                 Swal.fire(
                     'Saldo insuficiente para a combra!'
                 )
             }
         }
-    }else if(produtoAtual == 3){
+    } else if (produtoAtual == 3) {
         let quantidade = parseInt(quantidadeProduto.innerHTML);
-        if(quantidade > produtoestoque3){
+        if (quantidade > produtoestoque3) {
             Swal.fire(
                 'Infelizmente não temos essa quantidade no estoque!'
             )
-        }else{
+        } else {
             let preco = 4 * quantidade;
             let saldoDisbonivel = parseInt(saldo.innerHTML);
 
             let novoSaldo = saldoDisbonivel - preco;
 
-            if(novoSaldo >= 0 ){
-            saldo.innerHTML = novoSaldo;
-            produtoestoque3 = produtoestoque3 - quantidade;
-            estoque3.innerHTML = produtoestoque3;
-            Swal.fire({
-                position: 'top-end',
-                icon: 'success',
-                title: 'Compra realizada com sucesso',
-                showConfirmButton: false,
-                timer: 1500
-              })
-            }else {
+            if (novoSaldo >= 0) {
+                saldo.innerHTML = novoSaldo;
+                produtoestoque3 = produtoestoque3 - quantidade;
+                estoque3.innerHTML = produtoestoque3;
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Compra realizada com sucesso',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            } else {
                 Swal.fire(
                     'Saldo insuficiente para a combra!'
                 )
             }
         }
-    }else if(produtoAtual == 4){
+    } else if (produtoAtual == 4) {
         let quantidade = parseInt(quantidadeProduto.innerHTML);
-        if(quantidade > produtoestoque4){
+        if (quantidade > produtoestoque4) {
             Swal.fire(
                 'Infelizmente não temos essa quantidade no estoque!'
             )
-        }else{
+        } else {
             let preco = 3 * quantidade;
             let saldoDisbonivel = parseInt(saldo.innerHTML);
 
             let novoSaldo = saldoDisbonivel - preco;
-            if(novoSaldo >= 0 ){
-            saldo.innerHTML = novoSaldo;
-            produtoestoque4 = produtoestoque4 - quantidade;
-            estoque4.innerHTML = produtoestoque4;
-            Swal.fire({
-                position: 'top-end',
-                icon: 'success',
-                title: 'Compra realizada com sucesso',
-                showConfirmButton: false,
-                timer: 1500
-              })
-            }else {
+            if (novoSaldo >= 0) {
+                saldo.innerHTML = novoSaldo;
+                produtoestoque4 = produtoestoque4 - quantidade;
+                estoque4.innerHTML = produtoestoque4;
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Compra realizada com sucesso',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            } else {
                 Swal.fire(
                     'Saldo insuficiente para a combra!'
                 )
             }
         }
-    }else if(produtoAtual == 5){
+    } else if (produtoAtual == 5) {
         let quantidade = parseInt(quantidadeProduto.innerHTML);
-        if(quantidade > produtoestoque5){
+        if (quantidade > produtoestoque5) {
             Swal.fire(
                 'Infelizmente não temos essa quantidade no estoque!'
             )
-        }else{
+        } else {
             let preco = 7 * quantidade;
             let saldoDisbonivel = parseInt(saldo.innerHTML);
 
             let novoSaldo = saldoDisbonivel - preco;
-            if(novoSaldo >= 0 ){
-            saldo.innerHTML = novoSaldo;
-            produtoestoque5 = produtoestoque5 - quantidade;
-            estoque5.innerHTML = produtoestoque5;
-            Swal.fire({
-                position: 'top-end',
-                icon: 'success',
-                title: 'Compra realizada com sucesso',
-                showConfirmButton: false,
-                timer: 1500
-              }) }else {
+            if (novoSaldo >= 0) {
+                saldo.innerHTML = novoSaldo;
+                produtoestoque5 = produtoestoque5 - quantidade;
+                estoque5.innerHTML = produtoestoque5;
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Compra realizada com sucesso',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            } else {
                 Swal.fire(
                     'Saldo insuficiente para a combra!'
                 )
