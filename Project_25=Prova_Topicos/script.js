@@ -82,39 +82,69 @@ produtoEscolhido = false;
 produtoAtual=0;
 
 function produto1(){
+    if(saldo.innerHTML == '0'){
+        Swal.fire(
+            'Deposite seu saldo antes!'
+        )
+    }else{
     produtoSelecionado.innerHTML = 'Barra de Chocolate';
     produtoEscolhido = true;
     quantidadeProduto.innerHTML = '0';
     contador2=0;
     produtoAtual=1;
+    }
 }
 function produto2(){
+    if(saldo.innerHTML == '0'){
+        Swal.fire(
+            'Deposite seu saldo antes!'
+        )
+    }else{
     produtoSelecionado.innerHTML = 'Salgadinho';
     produtoEscolhido = true;
     quantidadeProduto.innerHTML = '0';
     contador2=0;
     produtoAtual=2;
+    }
 }
 function produto3(){
+    if(saldo.innerHTML == '0'){
+        Swal.fire(
+            'Deposite seu saldo antes!'
+        )
+    }else{
     produtoSelecionado.innerHTML = 'Refrigerante';
     produtoEscolhido = true;
     quantidadeProduto.innerHTML = '0';
     contador2=0;
     produtoAtual=3;
+    }
 }
 function produto4(){
+    if(saldo.innerHTML == '0'){
+        Swal.fire(
+            'Deposite seu saldo antes!'
+        )
+    }else{
     produtoSelecionado.innerHTML = 'Bolacha/Biscoito';
     produtoEscolhido = true;
     quantidadeProduto.innerHTML = '0';
     contador2=0;
     produtoAtual=4;
+    }
 }
 function produto5(){
+    if(saldo.innerHTML == '0'){
+        Swal.fire(
+            'Deposite seu saldo antes!'
+        )
+    }else{
     produtoSelecionado.innerHTML = 'Kinder Ovo';
     produtoEscolhido = true;
     quantidadeProduto.innerHTML = '0';
     contador2=0;
     produtoAtual=5;
+    }
 }
 
 const estoque1 = document.getElementById("estoque1");
@@ -150,8 +180,113 @@ function comprar(){
                 'Infelizmente não temos essa quantidade no estoque!'
             )
         }else{
+            let preco = 5 * quantidade;
+            let saldoDisbonivel = parseInt(saldo.innerHTML);
+
+            let novoSaldo = saldoDisbonivel - preco;
+
+            saldo.innerHTML = novoSaldo;
             produtoestoque1 = produtoestoque1 - quantidade;
             estoque1.innerHTML = produtoestoque1;
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Compra realizada com sucesso',
+                showConfirmButton: false,
+                timer: 1500
+              })
+        }
+    }else if(produtoAtual == 2){
+        let quantidade = parseInt(quantidadeProduto.innerHTML);
+        if(quantidade > produtoestoque2){
+            Swal.fire(
+                'Infelizmente não temos essa quantidade no estoque!'
+            )
+        }else{
+            let preco = 7 * quantidade;
+            let saldoDisbonivel = parseInt(saldo.innerHTML);
+
+            let novoSaldo = saldoDisbonivel - preco;
+
+            saldo.innerHTML = novoSaldo;
+            produtoestoque2 = produtoestoque2 - quantidade;
+            estoque2.innerHTML = produtoestoque2;
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Compra realizada com sucesso',
+                showConfirmButton: false,
+                timer: 1500
+              })
+        }
+    }else if(produtoAtual == 3){
+        let quantidade = parseInt(quantidadeProduto.innerHTML);
+        if(quantidade > produtoestoque3){
+            Swal.fire(
+                'Infelizmente não temos essa quantidade no estoque!'
+            )
+        }else{
+            let preco = 4 * quantidade;
+            let saldoDisbonivel = parseInt(saldo.innerHTML);
+
+            let novoSaldo = saldoDisbonivel - preco;
+
+            saldo.innerHTML = novoSaldo;
+            produtoestoque3 = produtoestoque3 - quantidade;
+            estoque3.innerHTML = produtoestoque3;
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Compra realizada com sucesso',
+                showConfirmButton: false,
+                timer: 1500
+              })
+        }
+    }else if(produtoAtual == 4){
+        let quantidade = parseInt(quantidadeProduto.innerHTML);
+        if(quantidade > produtoestoque4){
+            Swal.fire(
+                'Infelizmente não temos essa quantidade no estoque!'
+            )
+        }else{
+            let preco = 3 * quantidade;
+            let saldoDisbonivel = parseInt(saldo.innerHTML);
+
+            let novoSaldo = saldoDisbonivel - preco;
+
+            saldo.innerHTML = novoSaldo;
+            produtoestoque4 = produtoestoque4 - quantidade;
+            estoque4.innerHTML = produtoestoque4;
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Compra realizada com sucesso',
+                showConfirmButton: false,
+                timer: 1500
+              })
+        }
+    }else if(produtoAtual == 5){
+        let quantidade = parseInt(quantidadeProduto.innerHTML);
+        if(quantidade > produtoestoque5){
+            Swal.fire(
+                'Infelizmente não temos essa quantidade no estoque!'
+            )
+        }else{
+            let preco = 7 * quantidade;
+            let saldoDisbonivel = parseInt(saldo.innerHTML);
+
+            let novoSaldo = saldoDisbonivel - preco;
+
+            saldo.innerHTML = novoSaldo;
+            produtoestoque5 = produtoestoque5 - quantidade;
+            estoque5.innerHTML = produtoestoque5;
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Compra realizada com sucesso',
+                showConfirmButton: false,
+                timer: 1500
+              })
         }
     }
 }
