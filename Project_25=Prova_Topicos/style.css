@@ -83,6 +83,18 @@ body {
     font-family: "Segoe UI", Frutiger, "Frutiger Linotype";
     color: rgb(255, 0, 0);
 }
+.supertitulo4 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype";
+    color: #0d6efd;
+}
+.supertitulo5 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype";
+    color: rgb(255, 0, 0);
+}
 .numerosTrocando {
     font-size: 4.2rem;
     font-weight: 700;

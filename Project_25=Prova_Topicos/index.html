@@ -26,49 +26,64 @@
         <div class="row">
             <div class="col-12 col-lg-4 ">
                 <div class="col-12 text-center">
-                    <img src="https://cf.shopee.com.br/file/89e3bce5d80ed340fb9385d29fa871a7" alt="" class="img-produto" height="80" width="80">
+                    <a onclick="produto1()">
+                        <img src="https://cf.shopee.com.br/file/89e3bce5d80ed340fb9385d29fa871a7" alt=""
+                            class="img-produto" height="80" width="80">
+                    </a>
                     <br>
-                    <p class="linha">R$ 5 - Estoque: <span class="estoque">10</span></p>
+                    <p class="linha">R$ 5 - Estoque: <span class="estoque" id="estoque1"></span></p>
                 </div>
 
                 <div class="col-12 text-center">
-                    <img src="https://static.paodeacucar.com/img/uploads/1/264/23460264.jpg" alt="" class="img-produto" height="80" width="80">
+                    <a onclick="produto2()">
+                    <img src="https://static.paodeacucar.com/img/uploads/1/264/23460264.jpg" alt="" class="img-produto"
+                        height="80" width="80">
+                    </a>
                     <br>
-                    <p class="linha">R$ 7 - Estoque: <span class="estoque">9</span></p>
+                    <p class="linha">R$ 7 - Estoque: <span class="estoque" id="estoque2"></span></p>
                 </div>
 
                 <div class="col-12 text-center">
-                    <img src="https://supsaojoao.com.br/272-large_default/refrigerante-coca-cola-lata-350ml.jpg" alt="" class="img-produto" height="80" width="80">
+                    <a onclick="produto3()">
+                    <img src="https://supsaojoao.com.br/272-large_default/refrigerante-coca-cola-lata-350ml.jpg" alt=""
+                        class="img-produto" height="80" width="80">
+                    </a>
                     <br>
-                    <p class="linha">R$ 4 - Estoque: <span class="estoque">12</span></p>
+                    <p class="linha">R$ 4 - Estoque: <span class="estoque" id="estoque3"></span></p>
                 </div>
 
                 <div class="col-12 text-center">
-                    <img src="https://a-static.mlcdn.com.br/1500x1500/kit-12-biscoito-bolacha-passatempo-nestle-recheado-de-chocolate-pacote-130g/sobrinhosmodafeminina/2283p/64684fd2b8f58e1c088f7b4433ce1ad6.jpg" alt="" class="img-produto" height="80" width="80">
+                    <a onclick="produto4()">
+                    <img src="https://a-static.mlcdn.com.br/1500x1500/kit-12-biscoito-bolacha-passatempo-nestle-recheado-de-chocolate-pacote-130g/sobrinhosmodafeminina/2283p/64684fd2b8f58e1c088f7b4433ce1ad6.jpg"
+                        alt="" class="img-produto" height="80" width="80">
+                    </a>
                     <br>
-                    <p class="linha">R$ 3 - Estoque: <span class="estoque">6</span></p>
+                    <p class="linha">R$ 3 - Estoque: <span class="estoque" id="estoque4"></span></p>
                 </div>
 
                 <div class="col-12 text-center">
-                    <img src="https://static.paodeacucar.com/img/uploads/1/209/23035209.png" alt="" class="img-produto" height="80" width="80">
+                    <a onclick="produto5()">
+                    <img src="https://static.paodeacucar.com/img/uploads/1/209/23035209.png" alt="" class="img-produto"
+                        height="80" width="80">
+                    </a>
                     <br>
-                    <p class="linha">R$ 7 - Estoque: <span class="estoque">4</span></p>
+                    <p class="linha">R$ 7 - Estoque: <span class="estoque" id="estoque5"></span></p>
                 </div>
 
             </div>
 
             <div class="col-12 col-lg-4">
                 <div class="col-12 text-center mb-2">
-                    <span class="supertitulo">Produto Selecionado</span>
+                    <span class="supertitulo4" id="produtoSelecionado">Produto Selecionado</span>
                 </div>
                 <div class="col-12 text-center mt-5">
-                    <button type="button" class="btn btn-outline-success">+</button>
+                    <button type="button" class="btn btn-outline-success" onclick="adicionar()">+</button>
                 </div>
                 <div class="col-12 text-center mt-5 mb-5">
-                    <span class="numerosTrocando">3</span>
+                    <span class="numerosTrocando" id="quantidadeProduto"></span>
                 </div>
                 <div class="col-12 text-center">
-                    <button type="button" class="btn btn-outline-danger">-</button>
+                    <button type="button" class="btn btn-outline-danger" onclick="sub()">-</button>
                 </div>
 
                 <div class="col-12 text-center mt-5 mb-5">
@@ -83,7 +98,11 @@
                     <h1 class="supertitulo">Saldo</h1>
                 </div>
                 <div class="col-12 text-center mb-2">
-                    <h1 class="supertitulo2">R$ <span class="supertitulo3">17</span></h1>
+                    <h1 class="supertitulo2">R$ <span class="supertitulo3" id="saldo"></span></h1>
+                </div>
+
+                <div class="col-12 text-center mb-2">
+                    <h1 class="supertitulo4">Depositar: <span class="supertitulo5" id="deposito"></span></h1>
                 </div>
 
                 <table class="table table-borderless">
@@ -124,19 +143,19 @@
                         </tr>
                         <tr>
                             <td><button type="button" class="btn btn-danger" id="botao-cancela"
-                                onclick="corrige()">CANCELAR</button></td>
+                                    onclick="cancela()">CANCELAR</button></td>
                             <td><button type="button" value="0" class="btn btn-secondary"
                                     onclick="digitando(this.value)">
                                     <b>0</b> </button></td>
                             <td><button type="button" class="btn btn-success" id="botao-confirma"
-                                        onclick="confirma()">CONFIRMA</button></td>
+                                    onclick="confirma()">CONFIRMA</button></td>
                         </tr>
-                        
+
                     </tbody>
                 </table>
 
                 <div class="col-12 text-center mt-3 mb-5">
-                    <button type="button" class="btn btn-info">Retirar dinheiro</button>
+                    <button type="button" class="btn btn-info" onclick="retirarDinheiro()">Retirar dinheiro</button>
                 </div>
 
 
