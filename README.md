@@ -5,7 +5,9 @@ I am watching some Youtube videos and creating my own version of the code.
 The first 10 projects were inspaired in this video.
 link: https://www.youtube.com/watch?v=dtKciwk_si4&t=30961s
 
-(This mesage was written 6 month later)
-I´ve been working in other projects too.
-So my recent projects are quite interesting.
-I hope you guys like it.
+# Updatng this project
+
+Now some small applications and exercises I'm working on to improve my programming skills. 
+Most of them are unrelated to each other. By the way, some exercises are in English and others are in Portuguese. 😄
+
+# So basically, this repository now contains the project above, along with a bunch of other exercises
