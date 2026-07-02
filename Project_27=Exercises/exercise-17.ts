@@ -34,7 +34,3 @@ console.log(plusOne(digitTest2));
 
 let digitTest3 = [9,8,9];
 console.log(plusOne(digitTest3));
-
-// 99899
-// 989 -990
-// 979 -980
