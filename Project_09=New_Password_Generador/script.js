@@ -75,7 +75,6 @@ function copy_password(){
     const password = pwEl.innerHTML;
 
     if(!password){return;}
-
     
     textarea.value = password;
     document.body.appendChild(textarea);
