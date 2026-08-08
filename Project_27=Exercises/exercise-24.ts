@@ -20,8 +20,8 @@ function sortColors(nums: number[]): void {
     console.log(nums);
 }
 
-console.log(sortColors([2,0,2,1,1,0]));
-console.log(sortColors([2,0,1]));
+sortColors([2,0,2,1,1,0]);
+sortColors([2,0,1]);
 
 // with Dutch National Flag algorithm
 function sortColors2(nums: number[]): void {
@@ -51,5 +51,32 @@ function sortColors2(nums: number[]): void {
     console.log(nums);
 }
 
-console.log(sortColors2([2,0,2,1,1,0]));
-console.log(sortColors2([2,0,1]));
+sortColors2([2,0,2,1,1,0]);
+sortColors2([2,0,1]);
+
+// with Quick Sort algorithm
+function sortColors3(nums: number[]): void {
+    nums = quickSortFunc(nums);
+    console.log(nums);
+}
+
+function quickSortFunc(numbers: number[]): number[] {
+    if (numbers.length < 2) return numbers;
+
+    const pivot: number = numbers[0];
+    let lower: number[] = [];
+    let higher: number[] = [];
+
+    for (let i: number = 1; i < numbers.length; i++) {
+        if (numbers[i] <= pivot) {
+            lower.push(numbers[i]);
+        } else {
+            higher.push(numbers[i]);
+        }
+    }
+
+    return [...quickSortFunc(lower), pivot, ...quickSortFunc(higher)];
+}
+
+sortColors3([2,0,2,1,1,0]);
+sortColors3([2,0,1]);
