@@ -102,5 +102,3 @@ console.log(isValid2("[["));
 console.log(isValid2("(){}}{"));
 console.log(isValid2("({{{{}}}))"));
 console.log(isValid2("[([]])"));
-
-// https://leetcode.com/problems/permutations/description/ -> exercise-09.ts
